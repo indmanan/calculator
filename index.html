@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Content Writing lab
+        </title>
+    </head>
+    <body>
+        <form>
+       <input type="number" id="user-one">
+        <input type="number" id="user-two">
+        <button onclick="return main()">Calculate</button>
+        </form>
+        <h1>Your addition is </h1>
+        <p id="add-result"></p>
+         <h1>Your substraction is </h1>
+        <p id="sub-result"></p>
+        <h1>Your multiplication is </h1>
+        <p id="mul-result"></p>
+        <h1>Your division is </h1>
+        <p id="div-result"></p>
+
+    </body>
+    <script>
+        function main()
+        {
+            var x = document.getElementById("user-one").value;
+            var y = document.getElementById("user-two").value;
+            var x1 = Number(x);
+            var y1 = Number(y);
+            add(x1,y1);
+            sub(x1,y1);
+            mul(x1,y1);
+            div(x1,y1);
+            return false;
+        }
+        function add(x,y)
+        {
+            var result = document.getElementById("add-result");
+            result.innerHTML = x+y;
+        }
+        function sub(x,y)
+        {
+            var result = document.getElementById("sub-result");
+            result.innerHTML = x-y;
+        }
+        function mul(x,y)
+        {
+            var result = document.getElementById("mul-result");
+            result.innerHTML = x*y;
+        }
+        function div(x,y)
+        {
+            var result = document.getElementById("div-result");
+            result.innerHTML = x/y;
+        }
+   
+    </script>
+</html>
